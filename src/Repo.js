@@ -13,7 +13,7 @@ function Repo() {
     const filesResponse = await fetch(`https://api.github.com/repos/${OWNER}/${repo}/commits/${commits[0].sha}`);
     const data = await filesResponse.json();
     setFiles(data.files);
-  }, []);
+  }, [repo]);
 
   return (
     <>
